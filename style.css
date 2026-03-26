@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+}
+
+.status {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.board {
+    display: grid;
+    /* Chia 15 cột, mỗi cột rộng 30px */
+    grid-template-columns: repeat(15, 30px);
+    /* Chia 15 dòng, mỗi dòng cao 30px */
+    grid-template-rows: repeat(15, 30px);
+    gap: 1px; /* Đường viền giữa các ô */
+    background-color: #999; /* Màu nền của lưới */
+    border: 2px solid #333;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.cell {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #eee;
+}
+
+/* Màu sắc cho quân cờ */
+.cell.x { color: #e74c3c; } /* Màu đỏ cho X */
+.cell.o { color: #3498db; } /* Màu xanh cho O */
